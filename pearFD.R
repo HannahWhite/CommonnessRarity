@@ -17,7 +17,7 @@ set.seed(32)
 library(FD)
 
 # get traits data
-traits <- read.csv('D:\\IRC_Trinity\\Data\\Machair\\FullTraits.csv', header = TRUE)
+traits <- read.csv('FullTraits.csv', header = TRUE)
 traits <- traits[, c('species', 'Canopy.height', 'Seed.mass', 'Leaf.size',  'SLA', 
                      'Insects', 'Selfing', 'Wind',
                      'Seed', 'Vegetative')]
@@ -36,7 +36,7 @@ traits[,6:10] <- ifelse(traits[,6:10] > 0, 1, 0)
 aoo.func <- function(x){length(which(x > 0))} # calculates number of squares cover is > 0
 
 # read in raw data and relabel plot 824Z as 842 Z
-species <- read.csv('D:/IRC_Trinity/Data/Machair/Sitexspeciescover.csv', header = TRUE)
+species <- read.csv('Sitexspeciescover.csv', header = TRUE)
 names(species) <- gsub('Calastegia', 'Calystegia', names(species))
 
 library(plyr)
