@@ -58,13 +58,13 @@ species.scale <- species08.20cm
 species.scale <- species08.1m
 
 #re-order species names alphabetically
-specs <- species08.1[,13:150]
+specs <- species.scale[,13:150]
 sp.order <- specs[,order(colnames(specs))]
 
 #remove species not present
 pp <- which(colSums(sp.order)!=0)
 present.sp <- sp.order[,pp]
-site.sp <- data.frame(species08.1[,c(2, 5:7)], present.sp) # creates data frame of site info and species % cover
+site.sp <- data.frame(species.scale[,c(2, 5:7)], present.sp) # creates data frame of site info and species % cover
 
 xdim <- dim(site.sp)[2] # number of columns in data frame
 n <- xdim - 4 # number of species
