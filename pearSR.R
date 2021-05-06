@@ -18,7 +18,7 @@ library(abind)
 aoo.func <- function(x){length(which(x > 0))} # calculates number of squares cover is > 0
 
 # read in raw data and relabel plot 824Z as 842 Z
-species <- read.csv('D:/IRC_Trinity/Data/Machair/Sitexspeciescover.csv', header = TRUE)
+species <- read.csv('Sitexspeciescover.csv', header = TRUE)
 library(plyr)
 species$Plot.ID <- revalue(species$Plot.ID, c('824Z'='842Z'))
 
