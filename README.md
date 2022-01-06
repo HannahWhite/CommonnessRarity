@@ -9,3 +9,5 @@ pearSR.R, pearFD.R, pearFDabund.R and pearPGFD.R calculates the pearson correlat
 Randomisations for functional diversity and the pearson correlations using these randomisations can be found in randomiseFD.R and randomiseFDabund.R.
 
 SpatialModelsCommon.R and SpatialModelsRare.R use autoregressive models to model the relationship between the proportion of a community made up of rare or common species, and the biodiversity of the community.
+
+CombinedPlotCI.R produces figures based on data generated in other code files. 
